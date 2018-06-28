@@ -57,6 +57,11 @@ The improvements are...
 Improvements to clang-tidy
 --------------------------
 
+- New :doc:`smartcontractsecurity-overflow
+  <clang-tidy/checks/smartcontractsecurity-overflow>` check.
+
+  FIXME: add release notes.
+
 - The checks profiling info can now be stored as JSON files for futher
   post-processing and analysis.
 
