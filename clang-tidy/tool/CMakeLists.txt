@@ -37,6 +37,7 @@ target_link_libraries(clang-tidy
   clangTidyZirconModule
   clangTooling
   clangToolingCore
+  clangTidySmartContractSecurityModule
   )
 
 install(PROGRAMS clang-tidy-diff.py

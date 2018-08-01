@@ -569,6 +569,11 @@ extern volatile int ZirconModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED ZirconModuleAnchorDestination =
     ZirconModuleAnchorSource;
 
+extern volatile int SmartContractSecurityModuleAnchorSource;
+static int LLVM_ATTRIBUTE_UNUSED SmartContractSecurityModuleAnchorDestination =
+    SmartContractSecurityModuleAnchorSource;
+
+
 } // namespace tidy
 } // namespace clang
 

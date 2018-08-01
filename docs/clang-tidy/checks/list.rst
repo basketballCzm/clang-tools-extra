@@ -232,5 +232,7 @@ Clang-Tidy Checks
    readability-static-definition-in-anonymous-namespace
    readability-string-compare
    readability-uniqueptr-delete-release
+   smartcontractsecurity-multiIndexFind
    smartcontractsecurity-overflow
+   smartcontractsecurity-stringtosymbol
    zircon-temporary-objects

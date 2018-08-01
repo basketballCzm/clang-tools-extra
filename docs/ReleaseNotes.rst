@@ -57,6 +57,16 @@ The improvements are...
 Improvements to clang-tidy
 --------------------------
 
+- New :doc:`smartcontractsecurity-multiIndexFind
+  <clang-tidy/checks/smartcontractsecurity-multiIndexFind>` check.
+
+  FIXME: add release notes.
+
+- New :doc:`smartcontractsecurity-stringtosymbol
+  <clang-tidy/checks/smartcontractsecurity-stringtosymbol>` check.
+
+  FIXME: add release notes.
+
 - New :doc:`smartcontractsecurity-overflow
   <clang-tidy/checks/smartcontractsecurity-overflow>` check.
 
