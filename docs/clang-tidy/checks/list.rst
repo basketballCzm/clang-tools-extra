@@ -232,6 +232,7 @@ Clang-Tidy Checks
    readability-static-definition-in-anonymous-namespace
    readability-string-compare
    readability-uniqueptr-delete-release
+   smartcontractsecurity-freezepermission
    smartcontractsecurity-multiIndexFind
    smartcontractsecurity-overflow
    smartcontractsecurity-stringtosymbol

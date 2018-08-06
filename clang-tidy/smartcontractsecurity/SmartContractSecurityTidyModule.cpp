@@ -1,6 +1,7 @@
 #include "../ClangTidy.h"
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
+#include "FreezepermissionCheck.h"
 #include "MultiindexfindCheck.h"
 #include "OverflowCheck.h"
 #include "StringtosymbolCheck.h"
@@ -12,11 +13,13 @@ namespace smartcontractsecurity {
 class SmartContractSecurityModule : public ClangTidyModule {
 public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
+    CheckFactories.registerCheck<FreezepermissionCheck>(
+        "smartcontractsecurity-freezepermission");
     CheckFactories.registerCheck<MultiindexfindCheck>(
         "smartcontractsecurity-multiIndexFind");
     CheckFactories.registerCheck<OverflowCheck>(
         "smartcontractsecurity-overflow");
-    CheckFactories.registerCheck<OverflowCheck>(
+    CheckFactories.registerCheck<StringtosymbolCheck>(
         "smartcontractsecurity-stringtosymbol");
 	}
 };

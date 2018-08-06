@@ -1,6 +1,7 @@
 set(LLVM_LINK_COMPONENTS support)
   
 add_clang_library(clangTidySmartContractSecurityModule
+  FreezepermissionCheck.cpp
   MultiindexfindCheck.cpp
   OverflowCheck.cpp
   SmartContractSecurityTidyModule.cpp

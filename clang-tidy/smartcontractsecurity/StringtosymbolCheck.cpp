@@ -17,20 +17,21 @@ namespace clang {
 namespace tidy {
 namespace smartcontractsecurity {
 
+
+
 void StringtosymbolCheck::registerMatchers(MatchFinder *Finder) {
-  // FIXME: Add matchers.
-  Finder->addMatcher(functionDecl().bind("x"), this);
+	// FIXME: Add matchers.
+	Finder->addMatcher(callExpr(callee(functionDecl(hasAnyName("string_to_symbol")))).bind("function"),this);
 }
 
 void StringtosymbolCheck::check(const MatchFinder::MatchResult &Result) {
-  // FIXME: Add callback implementation.
-  const auto *MatchedDecl = Result.Nodes.getNodeAs<FunctionDecl>("x");
-  if (MatchedDecl->getName().startswith("awesome_"))
-    return;
-  diag(MatchedDecl->getLocation(), "function %0 is insufficiently awesome")
-      << MatchedDecl
-      << FixItHint::CreateInsertion(MatchedDecl->getLocation(), "awesome_");
+// FIXME: Add callback implementation.
+  const auto *MatchedDecl = Result.Nodes.getNodeAs<CallExpr>("function");
+  if (MatchedDecl)
+  	diag(MatchedDecl->getLocStart(), "Make sure the token name size is checked before calling the string_to_symbol function")
+      << FixItHint::CreateInsertion(MatchedDecl->getLocStart(), "eosio_assert(symbolname.size() <= 255)");
 }
+
 
 } // namespace smartcontractsecurity
 } // namespace tidy

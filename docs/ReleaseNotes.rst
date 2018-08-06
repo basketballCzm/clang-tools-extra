@@ -57,6 +57,11 @@ The improvements are...
 Improvements to clang-tidy
 --------------------------
 
+- New :doc:`smartcontractsecurity-freezepermission
+  <clang-tidy/checks/smartcontractsecurity-freezepermission>` check.
+
+  FIXME: add release notes.
+
 - New :doc:`smartcontractsecurity-multiIndexFind
   <clang-tidy/checks/smartcontractsecurity-multiIndexFind>` check.
 
